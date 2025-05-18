@@ -1,0 +1,13 @@
+player_move (clear)
+
+
+enermy follow player 
+
+player hit enermy 
+
+player kill enermy
+
+
+enermy will attack player with range
+
+
