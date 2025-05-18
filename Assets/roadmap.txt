@@ -1,13 +1,58 @@
-player_move (clear)
+player_move (main_ clear)
+
+breakpoint ????????????????
+????????? document ????????????????????? ??????????????????????  ???????????????????
+??????????????????? statement
 
 
-enermy follow player 
-
-player hit enermy 
-
-player kill enermy
 
 
-enermy will attack player with range
+enermy follow player                       (tester_enermy_action_follow_player             (status = ) )   (????????????)
+
+enermy will attack player with range       (tester_enermy_action_attack_player_with_range  (status = ) ) 
+
+enermy power up                            (tester_enermy_action_power_up                  (status = ) ) 
+  - enermy power up hp                       (tester_enermy_action_power_up_hp             (status = ) ) 
+  - enermy power up damage                   (tester_enermy_action_power_up_damage         (status = ) ) 
+
+play animation enermy           (tester_enermy_action_animation_play_enermy  (status = ) ) 
+  - play animation enermy idle            (tester_enermy_action_animation_play_enermy_idle    (status = ) ) 
+  - play animation enermy run             (tester_enermy_action_animation_play_enermy_run     (status = ) ) 
+  - play animation enermy attack          (tester_enermy_action_animation_play_enermy_attack  (status = ) ) 
+  - play animation enermy hited (?????)    (tester_enermy_action_animation_play_enermy_hited   (status = ) ) 
+  - play animation enermy dead            (tester_enermy_action_animation_play_enermy_dead    (status = ) ) 
+
+enermy wave_worker_with_enermy(????????? ????????)                                 (tester_enermy_action_wave_worker_with_enermy        (status = ) ) 
+   - enermy wave_worker_with_enermy_start (????????? ???????? ??????????)             (tester_enermy_action_wave_worker_with_enermy_start  (status = ) ) 
+   - enermy wave_worker_with_enermy_end (????????? ???????? ??????????(???????????))   (tester_enermy_action_wave_worker_with_enermy_end    (status = ) ) 
+
+
+
+
+
+
+player hit enermy                        (tester_Player_action_player_hit_enermy  (status = ) ) 
+
+player kill enermy                       (tester_Player_action_player_kill_enermy  (status = ) ) 
+
+
+Player power up                          (tester_player_action_power_up             (status = ) ) 
+  - Player  power up heal                  (tester_player_action_power_up_heal      (status = ) ) 
+  - Player  power up hp                    (tester_player_action_power_up_hp        (status = ) ) 
+  - Player  power up damage                (tester_player_action_power_up_damage    (status = ) ) 
+
+
+play animation player        (tester_player_action_animation_play_player                      (status = ) ) 
+  - play animation player idle            (tester_player_action_animation_play_player_idle    (status = ) ) 
+  - play animation enermy run             (tester_enermy_action_animation_play_player_run     (status = ) ) 
+  - play animation player attack          (tester_player_action_animation_play_player_attack  (status = ) ) 
+  - play animation player  hited (?????)   (tester_player_action_animation_play_player_hited   (status = ) ) 
+  - play animation player dead            (tester_player_action_animation_play_player_dead    (status = ) ) 
+
+
+
+dialog show you win         (tester_dialog_action_you_win         (status = ) ) 
+dialog show you loss        (tester_dialog_action_you_loss        (status = ) ) 
+dialog show you score       (tester_dialog_action_you_score       (status = ) ) 
 
 
