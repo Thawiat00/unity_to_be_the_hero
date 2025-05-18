@@ -1,13 +1,13 @@
 player_move (main_ clear)
 
-breakpoint ????????????????
-????????? document ????????????????????? ??????????????????????  ???????????????????
-??????????????????? statement
+breakpoint gamecore and loop
+do same document first mini task to complete 
+and then do  statement manager
 
 
 
 
-enermy follow player                       (tester_enermy_action_follow_player             (status = ) )   (????????????)
+enermy follow player                       (tester_enermy_action_follow_player             (status = complete ) )   (do this first)
 
 enermy will attack player with range       (tester_enermy_action_attack_player_with_range  (status = ) ) 
 
@@ -19,7 +19,7 @@ play animation enermy           (tester_enermy_action_animation_play_enermy  (st
   - play animation enermy idle            (tester_enermy_action_animation_play_enermy_idle    (status = ) ) 
   - play animation enermy run             (tester_enermy_action_animation_play_enermy_run     (status = ) ) 
   - play animation enermy attack          (tester_enermy_action_animation_play_enermy_attack  (status = ) ) 
-  - play animation enermy hited (?????)    (tester_enermy_action_animation_play_enermy_hited   (status = ) ) 
+  - play animation enermy hited (enermy hited by player)    (tester_enermy_action_animation_play_enermy_hited   (status = ) ) 
   - play animation enermy dead            (tester_enermy_action_animation_play_enermy_dead    (status = ) ) 
 
 enermy wave_worker_with_enermy(????????? ????????)                                 (tester_enermy_action_wave_worker_with_enermy        (status = ) ) 
