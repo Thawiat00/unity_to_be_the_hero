@@ -8,13 +8,34 @@ and then do  statement manager
 
 
 enermy follow player                       (tester_enermy_action_follow_player             (status = complete ) )   (do this first)
+ -enermy will attack player with range       (tester_enermy_action_attack_player_with_range  (status = ) ) 
 
-enermy will attack player with range       (tester_enermy_action_attack_player_with_range  (status = ) ) 
+enermy power up                            (tester_enermy_action_power_up                  (status = complete ) ) 
+//template
+(have example scritable object )
+(first have to implement example object to correct)
+(and then remove and refactor to value power up)
+(overview_1)
+//if you want to add something on create item you must have to assign VehicleInstance : MonoBehaviour
+// and that if you got it ,yes value erverything you must to add or assign on VehicleTypeInfo : ScriptableObject (first!!)
+// and that can assign on VehicleInstance : MonoBehaviour to modify edit on ScriptableObjectVehicleExample class (data bind)
+(overview_2)
+// you must have at least 1 scritable object (VehicleTypeInfo : ScriptableObject)
+// and then do create some 1 class  mono to handle call back same(run or move something ) on clone object monobehavior (VehicleInstance : MonoBehaviour )
+// and then final have to 1 class callback menu to :create callback to clone command and create object to do some behavior  (class ScriptableObjectVehicleExample) everytime  you click to do command callback then will do some task for you
 
-enermy power up                            (tester_enermy_action_power_up                  (status = ) ) 
+
+
+//refactor
+
+// 1 class scriptable value hp,attack
+// 1 class  mono handle press h increate hp, press a increate attack 
+//  and then final have to 1 class callback menu    :create callback to clone command and create object to do some behavior
   - enermy power up hp                       (tester_enermy_action_power_up_hp             (status = ) ) 
   - enermy power up damage                   (tester_enermy_action_power_up_damage         (status = ) ) 
 
+
+(step dlc to this later)
 play animation enermy           (tester_enermy_action_animation_play_enermy  (status = ) ) 
   - play animation enermy idle            (tester_enermy_action_animation_play_enermy_idle    (status = ) ) 
   - play animation enermy run             (tester_enermy_action_animation_play_enermy_run     (status = ) ) 
@@ -22,9 +43,13 @@ play animation enermy           (tester_enermy_action_animation_play_enermy  (st
   - play animation enermy hited (enermy hited by player)    (tester_enermy_action_animation_play_enermy_hited   (status = ) ) 
   - play animation enermy dead            (tester_enermy_action_animation_play_enermy_dead    (status = ) ) 
 
-enermy wave_worker_with_enermy(????????? ????????)                                 (tester_enermy_action_wave_worker_with_enermy        (status = ) ) 
-   - enermy wave_worker_with_enermy_start (????????? ???????? ??????????)             (tester_enermy_action_wave_worker_with_enermy_start  (status = ) ) 
-   - enermy wave_worker_with_enermy_end (????????? ???????? ??????????(???????????))   (tester_enermy_action_wave_worker_with_enermy_end    (status = ) ) 
+
+
+
+(to this on template)
+enermy wave_worker_with_enermy(?)                                 (tester_enermy_action_wave_worker_with_enermy        (status = ) ) 
+   - enermy wave_worker_with_enermy_start ()             (tester_enermy_action_wave_worker_with_enermy_start  (status = ) ) 
+   - enermy wave_worker_with_enermy_end (when enermy on wave game = 0))   (tester_enermy_action_wave_worker_with_enermy_end    (status = ) ) 
 
 
 
