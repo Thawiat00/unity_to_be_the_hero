@@ -6,6 +6,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public enum Test_vector_3
 {
+
+    //Static Properties
     Vector3_back,
     Vector3_down,
     Vector3_foward,
@@ -16,11 +18,21 @@ public enum Test_vector_3
     Vector3_right,
     Vector3_up,
     Vector3_zero,
+
+
+    //Properties
     Vector3_magnitude,
     Vector3_Normalize,
     Vector3_sqrMagnitude,
     Vector3_this_int_,
+
+
+
+    // Constructors
     Vector3_consturcter,
+
+
+    //Static Methods
     Vector3_Angle,
     Vector3_Vector3_ClampMagnitude,
     Vector3_Cross,
@@ -42,6 +54,9 @@ public enum Test_vector_3
     Vector3_Slerp,
     Vector3_SlerpUnclamped,
     Vector3_SmoothDamp,
+
+
+
 
 }
 
@@ -211,7 +226,7 @@ public class template_2_vector_3 : MonoBehaviour
     void awake_Vector3_MoveTowards()
     {
 
-
+        /*
         // Position the cube at the origin.
         transform.position = new Vector3(0.0f, 0.0f, 0.0f);
 
@@ -231,7 +246,7 @@ public class template_2_vector_3 : MonoBehaviour
         GameObject floor = GameObject.CreatePrimitive(PrimitiveType.Plane);
         floor.transform.position = new Vector3(0.0f, -1.0f, 0.0f);
 
-
+        */
 
     }
 
@@ -241,6 +256,8 @@ public class template_2_vector_3 : MonoBehaviour
 
         Example_vector3();
 
+
+        /*
 
         //help Vector3_consturcter
         //Set the vector, which you use to move the RigidBody upwards straight away
@@ -272,7 +289,7 @@ public class template_2_vector_3 : MonoBehaviour
 
         // Note the time at the start of the animation.
         startTime_Vector3_Slerp = Time.time;
-
+        */
 
     }
 
@@ -292,7 +309,32 @@ public class template_2_vector_3 : MonoBehaviour
         }
         else if( test_Vector_3 == Test_vector_3.Vector3_left)
         {
+            Vector3_left();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_negativeInfinity)
+        {
+            setup_Vector3_negativeInfinity();
+        }
+        else if (test_Vector_3 == Test_vector_3.Vector3_one)
+        {
+            Vector3_one();
+        }
+        else if (test_Vector_3 == Test_vector_3.Vector3_positiveInfinity)
+        {
+            setup_Vector3_Infinity();
+        }
+        else if (test_Vector_3 == Test_vector_3.Vector3_right)
+        {
+            Vector3_right();
+        }
+        else if (test_Vector_3 == Test_vector_3.Vector3_one)
+        {
+            Vector3_one();
+        }
 
+        else if (test_Vector_3 == Test_vector_3.Vector3_zero)
+        {
+            Vector3_zero();
         }
         
     }
@@ -345,15 +387,83 @@ public class template_2_vector_3 : MonoBehaviour
     }    
 
 
+    public void setup_Vector3_negativeInfinity()
+    {
+
+        //setup start position negative infinity
+        transform.position = Vector3.negativeInfinity;
+
+        
+        // test for dectect position is infinity or not
+        if (float.IsNegativeInfinity(transform.position.x))
+        {
+            Debug.Log("Position is set to negative infinity.");
+        }
+
+
+
+        /*
+         unity not assign transform.position to Vector3.negativeInfinity
+
+        but if you want to detect object if target not have target position
+
+        you can  write this code  below
+
+        ----------------------------------------------------------
+
+            void Start()
+         {
+        // is not have target position
+        Debug.Log("Waiting for a valid target position...");
+        }
+
+
+           void Update()
+        {
+        // what's if we set new position on input or event something
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            targetPosition = new Vector3(5f, 1f, 0f); // set value real
+            Debug.Log("Target position set!");
+        }
+
+        // if targetPosition not negativeInfinity let moving
+        if (!float.IsInfinity(targetPosition.x))
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, 5f * Time.deltaTime);
+        }
+
+        }
+
+
+         */
+
+
+
+
+
+    }
+
+
     public void Vector3_negativeInfinity()
     {
 
-         /*
-            public static Vector3 negativeInfinity;
-            Description
-            Shorthand for writing Vector3(float.NegativeInfinity, float.NegativeInfinity, float.NegativeInfinity).
+        /*
+           public static Vector3 negativeInfinity;
+           Description
+           Shorthand for writing Vector3(float.NegativeInfinity, float.NegativeInfinity, float.NegativeInfinity).
 
-        */
+       */
+
+        // is not transform to real because position cannot compute on static infinity
+        // but if want to reset on position can wirte this condition
+
+        if (float.IsInfinity(transform.position.x))
+        {
+            //reset for start original position
+            transform.position = Vector3.zero;
+            Debug.Log("Position reset to Vector3.zero from negative infinity.");
+        }
 
     }
 
@@ -369,6 +479,66 @@ public class template_2_vector_3 : MonoBehaviour
     }
 
 
+
+    public void setup_Vector3_Infinity()
+    {
+
+        //setup start position negative infinity
+        transform.position = Vector3.positiveInfinity;
+
+
+        // test for dectect position is infinity or not
+        if (float.IsInfinity(transform.position.x))
+        {
+            Debug.Log("Position is set to position infinity.");
+        }
+
+
+
+        /*
+         unity not assign transform.position to Vector3.positionInfinity
+
+        but if you want to detect object if target not have target position
+
+        you can  write this code  below
+
+        ----------------------------------------------------------
+
+            void Start()
+         {
+        // is not have target position
+        Debug.Log("Waiting for a valid target position...");
+        }
+
+
+           void Update()
+        {
+        // what's if we set new position on input or event something
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            targetPosition = new Vector3(5f, 1f, 0f); // set value real
+            Debug.Log("Target position set!");
+        }
+
+        // if targetPosition not negativeInfinity let moving
+        if (!float.IsInfinity(targetPosition.x))
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, 5f * Time.deltaTime);
+        }
+
+        }
+
+
+         */
+
+
+
+
+
+    }
+
+
+
     public void Vector3_positiveInfinity()
     {
 
@@ -378,6 +548,20 @@ public class template_2_vector_3 : MonoBehaviour
             Shorthand for writing Vector3(float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity).
 
        */
+
+
+
+        // is not transform to real because position cannot compute on static infinity
+        // but if want to reset on position can wirte this condition
+
+        if (float.IsInfinity(transform.position.x))
+        {
+            //reset for start original position
+            transform.position = Vector3.zero;
+            Debug.Log("Position reset to Vector3.zero from infinity.");
+        }
+
+
 
     }
 
@@ -1348,7 +1532,62 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
     void Update()
     {
 
-        if(test_Vector_3 == Test_vector_3.Vector3_sqrMagnitude)
+        if(test_Vector_3 == Test_vector_3.Vector3_back)
+        {
+            Vector3_back();
+
+
+        }
+
+        else if(test_Vector_3 == Test_vector_3.Vector3_down)
+        {
+            Vector3_down();
+
+        }
+
+        else if(test_Vector_3 == Test_vector_3.Vector3_foward)
+        {
+            Vector3_forward();
+        }
+
+        else if(test_Vector_3 == Test_vector_3.Vector3_left)
+        {
+            Vector3_left();
+
+        }
+
+        else if(test_Vector_3 == Test_vector_3.Vector3_negativeInfinity)
+        {
+            Vector3_negativeInfinity();
+        }
+
+        else if (test_Vector_3 == Test_vector_3.Vector3_one)
+        {
+            Vector3_one();
+
+        }
+        else if (test_Vector_3 == Test_vector_3.Vector3_positiveInfinity)
+        {
+            Vector3_positiveInfinity();
+        }
+        else if (test_Vector_3 == Test_vector_3.Vector3_right)
+        {
+            Vector3_right();
+        }
+
+
+        else if( test_Vector_3 == Test_vector_3.Vector3_up)
+        {
+            Vector3_up();
+        }
+
+        else if (test_Vector_3 == Test_vector_3.Vector3_zero)
+        {
+            Vector3_zero();
+        }
+
+
+       else if(test_Vector_3 == Test_vector_3.Vector3_sqrMagnitude)
         {
             Vector3_sqrMagnitude();
 
