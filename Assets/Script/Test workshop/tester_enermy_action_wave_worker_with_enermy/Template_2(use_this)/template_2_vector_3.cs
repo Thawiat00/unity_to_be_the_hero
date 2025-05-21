@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting;
-using static UnityEngine.GraphicsBuffer;
 
 
 public enum Test_vector_3
@@ -65,33 +63,38 @@ public enum Test_vector_3
 
 public class template_2_vector_3 : MonoBehaviour
 {
-
+    [Header("Help Enum state")]
     [SerializeField]
    private  Test_vector_3 test_Vector_3;
 
 
     //help for Vector3_normalized
+    [Header("Help for Vector3_normalized")]
     public Transform target_Vector3_normalized;
     public Vector3 direction_Vector3_normalized;
 
     //help sqrMagnitude
+    [Header("Help sqrMagnitude")]
 #nullable enable
     public Transform? other_sqrMagnitude;
     public float closeDistance = 5.0f;
 
 
     //help Vector3.this[int]
+    [Header("Help Vector3.this[int]")]
     public Vector3 p;
 
 
     //help Vector3_consturcter
-    Vector3 myVector;
-    Rigidbody m_Rigidbody;
-    float m_Speed = 2.0f;
+    [Header("Help Vector3_consturcter")]
+    public Vector3 myVector_Vector3_consturcter;
+   public Rigidbody m_Rigidbody_Vector3_consturcter;
+   public  float m_Speed_Vector3_consturcter = 2.0f;
 
 
 
     //help Vector3_Angle
+    [Header("Help Vector3_Angle")]
     public Transform target_Vector3_Angle;
 
     // prints "close" if the z-axis of this transform looks
@@ -100,7 +103,7 @@ public class template_2_vector_3 : MonoBehaviour
 
 
     //help Vector3_ClampMagnitude
-
+    [Header("Help Vector3_ClampMagnitude")]
     // Move the object around with the arrow keys but confine it
     // to a given radius around a center point.
     public Vector3 centerPt;
@@ -110,44 +113,45 @@ public class template_2_vector_3 : MonoBehaviour
 
 
     //help Vector3_Distance
-
+    [Header("Help Vector3_Distance")]
     public Transform otherDistance;
 
 
     //help Vector3_Dot
+    [Header("Help Vector3_Dot")]
     public Transform otherdot;
 
 
 
     //help Vector3.Lerp  
     // Transforms to act as start and end markers for the journey.
+    [Header("Help Vector3.Lerp")]
     public Transform startMarker;
     public Transform endMarker;
-
     // Movement speed in units per second.
     public float speed_on_Vector3_Lerp  = 1.0F;
-
     // Time when the movement started.
     private float startTime_Vector3_Lerp;
-
     // Total distance between the markers.
     private float journeyLength_Vector3_Lerp;
 
 
 
     //help Vector3_Max
-
+    [Header("Help Vector3_Max")]
     public Vector3 a_Vector3_Max = new Vector3(1, 2, 3);
     public Vector3 b_Vector3_Max = new Vector3(4, 3, 2);
 
 
     //help Vector3.Min
+    [Header("Help Vector3.Min")]
     public Vector3 a_Vector_min = new Vector3(1, 2, 3);
     public Vector3 b_Vector_min = new Vector3(4, 3, 2);
 
 
 
     //help Vector3_MoveTowards
+    [Header("Help Vector3_MoveTowards")]
     // Adjust the speed for the application.
     public float speed_Vector3_MoveTowards = 1.0f;
     // The target (cylinder) position.
@@ -156,6 +160,7 @@ public class template_2_vector_3 : MonoBehaviour
 
 
     //help Vector3_OrthoNormalize
+    [Header("Help Vector3_OrthoNormalize")]
     // The axis and amount of scaling.
     public Vector3 stretchAxis_Vector3_OrthoNormalize;
     public float stretchFactor_Vector3_OrthoNormalize = 1.0F;
@@ -173,6 +178,7 @@ public class template_2_vector_3 : MonoBehaviour
 
 
     //help Vector3_ProjectOnPlane
+    [Header("Help Vector3_ProjectOnPlane")]
     private Vector3 vector, planeNormal;
     private Vector3 response;
     private float radians;
@@ -182,10 +188,12 @@ public class template_2_vector_3 : MonoBehaviour
 
 
     //help Vector3_Reflect
+    [Header("Help Vector3_Reflect")]
     public Transform originalObject_Vector3_Reflect;
     public Transform reflectedObject_Vector3_Reflect;
 
     //help Vector3_RotateTowards
+    [Header("Help Vector3_RotateTowards")]
     // The target marker.
     public Transform target_Vector3_RotateTowards;
     // Angular speed in radians per sec.
@@ -195,10 +203,12 @@ public class template_2_vector_3 : MonoBehaviour
 
 
     //help Vector3_SignedAngle
+    [Header("Help Vector3_SignedAngle")]
     public Transform target_Vector3_SignedAngle;
 
 
     //help Vector3_Slerp
+    [Header("Help Vector3_Slerp")]
     public Transform sunrise_Vector3_Slerp;
     public Transform sunset_Vector3_Slerp;
     // Time to move from sunrise to sunset position, in seconds.
@@ -209,6 +219,7 @@ public class template_2_vector_3 : MonoBehaviour
 
 
     //help Vector3_SmoothDamp
+    [Header("Help Vector3_SmoothDamp")]
     public Transform target_Vector3_SmoothDamp;
     public float smoothTime_Vector3_SmoothDamp = 0.3F;
     private Vector3 velocity_Vector3_SmoothDamp = Vector3.zero;
@@ -358,6 +369,18 @@ public class template_2_vector_3 : MonoBehaviour
         {
             Vector3_sqrMagnitude();
         }
+        else if(test_Vector_3 == Test_vector_3.Vector3_this_int_)
+        {
+            Vector3_this_int_();
+        }
+
+        //Constructors
+        else if(test_Vector_3 == Test_vector_3.Vector3_consturcter)
+        {
+            //Vector3_consturcter();
+            setup_Vector3_consturcter();
+        }
+
 
 
     }
@@ -870,6 +893,16 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
     }
 
 
+    public void setup_Vector3_consturcter()
+    {
+        //Set the vector, which you use to move the RigidBody upwards straight away
+        myVector_Vector3_consturcter = new Vector3(0.0f, 1.0f, 0.0f);
+        //Fetch the RigidBody you attach to the GameObject
+        m_Rigidbody_Vector3_consturcter = GetComponent<Rigidbody>();
+
+
+    }
+
     public void Vector3_consturcter()
     {
 
@@ -877,7 +910,7 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
         //m_Rigidbody.linearVelocity = myVector * m_Speed;
 
         //Move the RigidBody upwards at the speed you define
-        m_Rigidbody.linearVelocity = myVector * m_Speed;
+        m_Rigidbody_Vector3_consturcter.linearVelocity = myVector_Vector3_consturcter * m_Speed_Vector3_consturcter;
     }
 
 
@@ -1286,6 +1319,7 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
 
     }
+
 
     public void Vector3_Project(Transform target, Vector3 railDirection)
     {
@@ -1735,13 +1769,27 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
             Vector3_sqrMagnitude();
 
         }
-       
-       else  if(test_Vector_3 == Test_vector_3.Vector3_consturcter)
+
+        else if(test_Vector_3 == Test_vector_3.Vector3_this_int_)
+        {
+            Vector3_this_int_();
+
+        }
+
+
+
+        //Constructors
+
+        else if (test_Vector_3 == Test_vector_3.Vector3_consturcter)
         {
             Vector3_consturcter();
-        }    
+        }
 
-        else if(test_Vector_3 == Test_vector_3.Vector3_Angle)
+
+
+        // Static Methods
+
+        else if (test_Vector_3 == Test_vector_3.Vector3_Angle)
         {
             Vector3_Angle();
         }
