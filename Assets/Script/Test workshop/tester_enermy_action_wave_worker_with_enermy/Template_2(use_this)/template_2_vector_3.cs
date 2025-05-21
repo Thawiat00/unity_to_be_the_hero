@@ -70,9 +70,12 @@ public class template_2_vector_3 : MonoBehaviour
    private  Test_vector_3 test_Vector_3;
 
 
+    //help for Vector3_normalized
+    public Transform target_Vector3_normalized;
+    public Vector3 direction_Vector3_normalized;
 
     //help sqrMagnitude
-    #nullable enable
+#nullable enable
     public Transform? other_sqrMagnitude;
     public float closeDistance = 5.0f;
 
@@ -295,6 +298,9 @@ public class template_2_vector_3 : MonoBehaviour
 
     void Example_vector3()
     {
+
+        //Static Properties
+
         if (test_Vector_3 == Test_vector_3.Vector3_back)
         {
             Vector3_back();
@@ -336,7 +342,24 @@ public class template_2_vector_3 : MonoBehaviour
         {
             Vector3_zero();
         }
-        
+
+        //Properties
+        else if (test_Vector_3 == Test_vector_3.Vector3_magnitude)
+        {
+            Vector3_magnitude();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Normalize)
+        {
+          //  setup_Vector3_Normalize();
+            //setup_Vector3_Normalize();
+           // Vector3_Normalize();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_sqrMagnitude)
+        {
+            Vector3_sqrMagnitude();
+        }
+
+
     }
 
 
@@ -615,10 +638,53 @@ public class template_2_vector_3 : MonoBehaviour
             The length of the vector is square root of (x*x+y*y+z*z).
 
             If you only need to compare magnitudes of some vectors, you can compare squared magnitudes of them using sqrMagnitude (computing squared magnitudes is faster).
-          
+        
+        example
+        Vector3 position = new Vector3(3, 4, 0);
+
+        // length of vector (3,4,0) is 5 (on propose petagolus)
+        float length = position.magnitude;
+
+        Debug.Log("Magnitude = " + length); // Output: Magnitude = 5
+
+        another one
+
          */
+
+        // compute direction center point of origin (0,0,0)
+        float distanceFromOrigin = transform.position.magnitude;
+
+        if (distanceFromOrigin > 10f)
+        {
+           // Debug.Log("คุณอยู่ไกลจากจุดเริ่มต้นเกินไป!");
+            Debug.Log("you stay far from point starter!");
+        }
+        /*
+         tip: if want compute direction ,you should use sqrMagnitude
+        */
     }
 
+    public void setup_Vector3_Normalize()
+    {
+
+        /*
+        if (target_Vector3_normalized == null)
+        {
+
+            Debug.LogWarning("not have target_Vector3_normalized on script!");
+            return;
+        }
+
+        Vector3 direction = (target_Vector3_normalized.position - transform.position).normalized;
+
+        Debug.Log("Direction: " + direction);
+        //keep
+        */
+
+        this.transform.position =new Vector3(0, 0, 0);
+        this.target_Vector3_normalized.transform.position = new Vector3(5, 0, 0);
+
+    }
 
     public void Vector3_Normalize()
     {
@@ -683,6 +749,67 @@ public class template_2_vector_3 : MonoBehaviour
         /*
          it's help to computer vector a and vector b to move will corrent 
         dlc:  https://www.wayline.io/blog/unity-how-to-normalize-a-vector
+
+        benefits:
+        is unit vector have same direction origin but length is 1
+        use for direction of movement
+        use for shoot bullet in direction we want
+        use for compute force / direction  not care about length of vector
+
+        another example
+        Vector3 velocity = new Vector3(2, 3, 6);
+        Vector3 direction = velocity.normalized;
+
+        Debug.Log("Direction (normalized) = " + direction);
+        Debug.Log("Magnitude of normalized vector = " + direction.magnitude); // is must be  1
+
+
+        another example
+         */
+
+
+
+
+        //  Debug.Log("Running...");
+        int speed = 1;
+
+        if (target_Vector3_normalized == null)
+        {
+            Debug.LogWarning("❌ target_Vector3_normalized not set Inspector");
+            return;
+        }
+
+        Debug.Log("🚀 My Position: " + transform.position);
+        Debug.Log("🎯 Target Position: " + target_Vector3_normalized.position);
+
+        Vector3 offset = target_Vector3_normalized.position - transform.position;
+        Debug.Log("📐 Raw Offset: " + offset);
+
+        if (offset.magnitude < 2f)
+        {
+          //  Debug.Log("✅ ตำแหน่งใกล้กันหรือเท่ากัน → ไม่เคลื่อนที่");
+            Debug.Log("✅ position closer or equal 2f → not move");
+            return;
+        }
+
+        //make diretion moving to normalized
+        Vector3 direction = offset.normalized;
+        Debug.Log("🧭 Direction: " + direction);
+
+        transform.position += direction * speed * Time.deltaTime;
+
+
+
+
+
+
+
+
+
+        //tip
+        /*
+        Vector3.normalized is not return value vector origin
+        if want to change vector origin will be vector unit ,let use Normalize() instend
          */
     }
 
@@ -1532,7 +1659,9 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
     void Update()
     {
 
-        if(test_Vector_3 == Test_vector_3.Vector3_back)
+        //Static Properties
+
+        if (test_Vector_3 == Test_vector_3.Vector3_back)
         {
             Vector3_back();
 
@@ -1587,7 +1716,21 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
         }
 
 
-       else if(test_Vector_3 == Test_vector_3.Vector3_sqrMagnitude)
+        // Properties
+        else if (test_Vector_3 == Test_vector_3.Vector3_magnitude)
+        {
+            Vector3_magnitude();
+        }
+
+    
+
+        else if (test_Vector_3 == Test_vector_3.Vector3_Normalize)
+        {
+            Vector3_Normalize();
+        }
+
+
+        else if(test_Vector_3 == Test_vector_3.Vector3_sqrMagnitude)
         {
             Vector3_sqrMagnitude();
 

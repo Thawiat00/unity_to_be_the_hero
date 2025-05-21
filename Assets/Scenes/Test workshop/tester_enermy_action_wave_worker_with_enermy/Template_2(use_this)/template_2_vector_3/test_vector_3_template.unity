@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 30
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -283,12 +285,12 @@ GameObject:
   - component: {fileID: 100198284}
   - component: {fileID: 100198283}
   m_Layer: 0
-  m_Name: Vector3_sqrMagnitude
+  m_Name: Vector3_sqrMagnitude_ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &100198282
 Transform:
   m_ObjectHideFlags: 0
@@ -298,11 +300,11 @@ Transform:
   m_GameObject: {fileID: 100198281}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.92, y: 0, z: -6.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 598700559}
+  m_Father: {fileID: 610170422}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &100198283
 MonoBehaviour:
@@ -317,7 +319,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 12
-  other_sqrMagnitude: {fileID: 0}
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
+  other_sqrMagnitude: {fileID: 1785479638}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
   target_Vector3_Angle: {fileID: 0}
@@ -452,6 +456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 1
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -617,6 +623,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 34
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -767,6 +775,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 16
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -883,12 +893,12 @@ GameObject:
   - component: {fileID: 245578661}
   - component: {fileID: 245578660}
   m_Layer: 0
-  m_Name: ' Vector3_Normalize'
+  m_Name: ' Vector3_Normalize_ref'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &245578659
 Transform:
   m_ObjectHideFlags: 0
@@ -898,11 +908,11 @@ Transform:
   m_GameObject: {fileID: 245578658}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 598700559}
+  m_Father: {fileID: 668879826}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &245578660
 MonoBehaviour:
@@ -917,6 +927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 11
+  target_Vector3_normalized: {fileID: 1058479779}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -1108,6 +1120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 25
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -1332,6 +1346,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 0
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -1408,6 +1424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 28
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -1558,6 +1576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 8
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -1679,7 +1699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &583155247
 Transform:
   m_ObjectHideFlags: 0
@@ -1689,7 +1709,7 @@ Transform:
   m_GameObject: {fileID: 583155246}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1708,6 +1728,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 10
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -1858,6 +1880,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 13
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -1990,10 +2014,43 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 583155247}
-  - {fileID: 245578659}
-  - {fileID: 100198282}
+  - {fileID: 668879826}
+  - {fileID: 610170422}
   - {fileID: 593748900}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &610170421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610170422}
+  m_Layer: 0
+  m_Name: Vector3_sqrMagnitude
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &610170422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610170421}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 100198282}
+  - {fileID: 1785479638}
+  m_Father: {fileID: 598700559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &615480457
 GameObject:
@@ -2043,6 +2100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 17
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -2193,6 +2252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 24
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -2295,6 +2356,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637989878}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &668879825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668879826}
+  m_Layer: 0
+  m_Name: ' Vector3_Normalize'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &668879826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668879825}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 245578659}
+  - {fileID: 1058479779}
+  m_Father: {fileID: 598700559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &669818628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 3
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -2545,6 +2641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 29
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -2695,6 +2793,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 35
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -2845,6 +2945,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 23
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -2995,6 +3097,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 33
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -3097,6 +3201,114 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041281411}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1058479778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058479779}
+  - component: {fileID: 1058479782}
+  - component: {fileID: 1058479781}
+  - component: {fileID: 1058479780}
+  m_Layer: 0
+  m_Name: target_Vector3_Normalize
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058479779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058479778}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 668879826}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1058479780
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058479778}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1058479781
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058479778}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1058479782
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058479778}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1119718134
 GameObject:
   m_ObjectHideFlags: 0
@@ -3145,6 +3357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 20
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -3295,6 +3509,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 15
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -3445,6 +3661,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 19
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -3627,6 +3845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 14
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -3777,6 +3997,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 9
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -3927,6 +4149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 7
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -4077,6 +4301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 5
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -4425,6 +4651,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 2
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -4590,6 +4818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 32
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -4740,6 +4970,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 26
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -4890,6 +5122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 4
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -5040,6 +5274,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 22
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -5190,6 +5426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 27
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -5340,6 +5578,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 31
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -5442,6 +5682,114 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737758841}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1785479637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1785479638}
+  - component: {fileID: 1785479642}
+  - component: {fileID: 1785479641}
+  - component: {fileID: 1785479640}
+  m_Layer: 0
+  m_Name: Vector3_sqrMagnitude_other
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1785479638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785479637}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 610170422}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1785479640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785479637}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1785479641
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785479637}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1785479642
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785479637}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1829547437
 GameObject:
   m_ObjectHideFlags: 0
@@ -5490,6 +5838,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 6
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -5640,6 +5990,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 18
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
@@ -5790,6 +6142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test_Vector_3: 21
+  target_Vector3_normalized: {fileID: 0}
+  direction_Vector3_normalized: {x: 0, y: 0, z: 0}
   other_sqrMagnitude: {fileID: 0}
   closeDistance: 5
   p: {x: 0, y: 0, z: 0}
