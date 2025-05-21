@@ -111,6 +111,16 @@ public class template_2_vector_3 : MonoBehaviour
 
 
 
+    //help Vector3_Cross
+    [Header("Help Vector3_Cross")]
+    public Transform pointA_Vector3_Cross, pointB_Vector3_Cross, pointOrigin_Vector3_Cross;
+
+
+    [Header("Object To Align (optional_Help Vector3_Cross)")]
+    public Transform objectToAlign;
+
+
+
 
     //help Vector3_Distance
     [Header("Help Vector3_Distance")]
@@ -381,6 +391,12 @@ public class template_2_vector_3 : MonoBehaviour
             setup_Vector3_consturcter();
         }
 
+
+        else if(test_Vector_3 == Test_vector_3.Vector3_Angle)
+        {
+
+            Vector3_Angle();
+        }
 
 
     }
@@ -936,15 +952,124 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
         */
 
+        //this example same enermy see player on my eye you can create gizmoss to raycast how much area degree enermy see
+        // (Enemy FOV) 
+
+        
+        // compute direction go search target
         Vector3 targetDir = target_Vector3_Angle.position - transform.position;
+        // compute between direction enermy turn face 
         float angle = Vector3.Angle(targetDir, transform.forward);
+
+        
 
         if (angle < 5.0f)
             print("Close");
 
 
+        /*
+
+          🧠 tip useful:
+         use or modify value radius in Inspector for see result on real-time
+
+          you can set value centerPt for be position on GameObject etc: center map or the object must rotation area of npc 
+
+       */
+
+        //OnDrawGizmos_Vector3_Angle();
 
     }
+
+    private void OnDrawGizmos()
+    {
+        if(test_Vector_3 == Test_vector_3.Vector3_Angle)
+        {
+
+            if (target_Vector3_Angle == null) return;
+
+            // ทิศทางกับมุมเหมือนใน Update()
+            Vector3 targetDir = target_Vector3_Angle.position - transform.position;
+            float angle = Vector3.Angle(targetDir, transform.forward);
+
+            // เปลี่ยนสี Gizmos ตามเงื่อนไขเดียวกัน
+            Gizmos.color = angle < 5.0f ? Color.red : Color.blue;
+
+            // วาดเส้นจากศัตรูไปหาเป้าหมาย
+            Gizmos.DrawLine(transform.position, target_Vector3_Angle.position);
+
+            // วาดเส้นแสดงทิศที่หันไป
+            Gizmos.color = Color.white;
+            Gizmos.DrawRay(transform.position, transform.forward * 5f);
+
+
+            //result
+            /*
+            🎯 result:
+            เส้นสีแดง: เป้าหมายอยู่ภายในมุม 5 องศา
+            red line : target stay in redian 5 degree
+
+            blue line : target out of redian 5 degree
+
+            white line : show direction enermy ratationing on the line
+             */
+
+          
+
+
+        }
+
+        else if(test_Vector_3 == Test_vector_3.Vector3_Vector3_ClampMagnitude)
+        {
+
+            // ตั้งค่าสี Gizmos และวาดวงกลมรัศมี
+            Gizmos.color = Color.cyan;
+
+            // วาดจุดศูนย์กลาง
+            Gizmos.DrawSphere(centerPt, 0.1f);
+
+            // วาดขอบเขตรัศมี (ใช้ WireSphere)
+            Gizmos.DrawWireSphere(centerPt, radius);
+
+            // วาดเส้นจากศูนย์กลางไปยังตำแหน่งปัจจุบัน
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawLine(centerPt, transform.position);
+
+            /*
+            
+            🧪 thing you see in Scene View:
+            🔵 วงกลมสีฟ้า (Cyan) = ขอบเขตรัศมีที่วัตถุจะไม่ออกนอกไปได้
+            🔵 circle blue (Cyan) = area of degree object is keep to on area and not go out area 
+
+
+            🟡 เส้นสีเหลือง = แสดงระยะห่างจากจุดศูนย์กลาง
+            🟡 line yellow color = show direction from center point
+
+            🔹 mini point blue = position centerPt
+
+
+             */
+
+        }
+
+
+        else if(test_Vector_3 == Test_vector_3.Vector3_Cross)
+        {
+
+            if (pointA_Vector3_Cross && pointB_Vector3_Cross && pointOrigin_Vector3_Cross)
+            {
+                Vector3 origin = pointOrigin_Vector3_Cross.position;
+                Vector3 normal = Vector3_Cross_GetNormal();
+
+                Gizmos.color = Color.green;
+                Gizmos.DrawLine(origin, origin + normal);
+                Gizmos.DrawSphere(origin + normal, 0.05f);
+            }
+
+        }
+
+
+    }
+
 
 
     public void Vector3_ClampMagnitude()
@@ -972,7 +1097,8 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
     }
 
 
-    public void Vector3_Cross()
+    // Get the normal to a triangle from the three corner points a, b, and o, where o is the origin point of vectors a and b.
+    public Vector3 Vector3_Cross_GetNormal()
     {
 
         /*   
@@ -987,20 +1113,50 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
         You can determine the direction of the result vector using the "left hand rule".
          */
 
-
-        // Get the normal to a triangle from the three corner points a, b, and o, where o is the origin point of vectors a and b.
-        Vector3 GetNormal(Vector3 a, Vector3 b, Vector3 o)
+        if (pointA_Vector3_Cross && pointB_Vector3_Cross && pointOrigin_Vector3_Cross)
         {
-            // Find vectors corresponding to two of the sides of the triangle.
+            Vector3 a = pointA_Vector3_Cross.position;
+            Vector3 b = pointB_Vector3_Cross.position;
+            Vector3 o = pointOrigin_Vector3_Cross.position;
+
             Vector3 side1 = a - o;
             Vector3 side2 = b - o;
 
-            // Cross the vectors to get a perpendicular vector, then normalize it. This is the Result vector in the drawing above.
             return Vector3.Cross(side1, side2).normalized;
         }
-
-
+        return Vector3.up;
     }
+
+
+    // ✅ ฟังก์ชันหันวัตถุตาม normal
+    public void AlignToSurface()
+    {
+        if (objectToAlign == null)
+        {
+            Debug.LogWarning("objectToAlign not assign!");
+            return;
+        }
+
+        Vector3 normal = Vector3_Cross_GetNormal();
+
+        // ✅ วิธีที่ 1: หันตาม normal โดยให้ 'up' ของวัตถุ เท่ากับ normal
+        // ✅ option1 : ratate with normal depent let 'up' of object equal normal
+        objectToAlign.rotation = Quaternion.FromToRotation(Vector3.up, normal);
+
+        // ✅ วิธีที่ 2 (ทางเลือก): หันวัตถุให้ 'forward' อยู่ตามแกน z และตั้งฉากกับพื้นผิว
+        // ✅ option2 (option): rotate object let 'forward' stay of axis z and sharp with plan
+        //   objectToAlign.rotation = Quaternion.LookRotation(Vector3.forward, normal);
+
+        // 🔁 overview
+        // top view (↑ Y) rotate on  normal  FromToRotation(Vector3.up, normal)
+        // front  front size(→ Z) หันตาม normal    LookRotation(normal)
+
+        //frontsize walk in size plane quake LookRotation(forward, normal)
+        
+        Debug.Log("Aligned object to normal.");
+    }
+
+
 
 
     public void Vector3_Distance()
@@ -1794,15 +1950,27 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
             Vector3_Angle();
         }
 
+     
+
 
         else if(test_Vector_3 == Test_vector_3.Vector3_Vector3_ClampMagnitude)
         {
             Vector3_ClampMagnitude();
         }
 
+
+
+
+
         else if(test_Vector_3 == Test_vector_3.Vector3_Cross)
         {
-            Vector3_Cross();
+          //  Vector3_Cross_GetNormal();
+            // Vector3_Cross();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                AlignToSurface();
+            }
+          
         }
 
 

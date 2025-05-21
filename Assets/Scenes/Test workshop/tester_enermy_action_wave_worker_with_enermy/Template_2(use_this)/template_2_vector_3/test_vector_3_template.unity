@@ -178,6 +178,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -274,6 +278,114 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50338742}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &87119535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 87119536}
+  - component: {fileID: 87119539}
+  - component: {fileID: 87119538}
+  - component: {fileID: 87119537}
+  m_Layer: 0
+  m_Name: Point_A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &87119536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87119535}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.09, y: 0.02, z: 11.690001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 297716139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &87119537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87119535}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &87119538
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87119535}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &87119539
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87119535}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &100198281
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +445,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -473,6 +589,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -643,6 +763,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -797,7 +921,11 @@ MonoBehaviour:
   m_Speed_Vector3_consturcter: 2
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
-  radius: 0
+  radius: 10
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -953,6 +1081,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -1090,6 +1222,42 @@ Transform:
   - {fileID: 1234745025}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &297716138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297716139}
+  m_Layer: 0
+  m_Name: Vector3_Cross
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &297716139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297716138}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 87119536}
+  - {fileID: 1738443084}
+  - {fileID: 2107410009}
+  - {fileID: 1911810326}
+  - {fileID: 615480458}
+  m_Father: {fileID: 699311085}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &339833883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1317,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -1378,6 +1550,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -1459,6 +1635,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -1614,6 +1794,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -1769,6 +1953,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -1924,6 +2112,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -2102,12 +2294,12 @@ GameObject:
   - component: {fileID: 615480460}
   - component: {fileID: 615480459}
   m_Layer: 0
-  m_Name: Vector3_Cross
+  m_Name: Vector3_Cross_ref_and_object_to_align
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &615480458
 Transform:
   m_ObjectHideFlags: 0
@@ -2120,8 +2312,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 699311085}
+  m_Children:
+  - {fileID: 1110137695}
+  m_Father: {fileID: 297716139}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &615480459
 MonoBehaviour:
@@ -2147,6 +2340,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 87119536}
+  pointB_Vector3_Cross: {fileID: 1738443084}
+  pointOrigin_Vector3_Cross: {fileID: 2107410009}
+  objectToAlign: {fileID: 615480458}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -2302,6 +2499,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -2475,6 +2676,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -2615,9 +2820,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1120310214}
+  - {fileID: 1390494437}
   - {fileID: 183220433}
-  - {fileID: 615480458}
+  - {fileID: 297716139}
   - {fileID: 1898213715}
   - {fileID: 1159463066}
   - {fileID: 1119718135}
@@ -2697,6 +2902,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -2852,6 +3061,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -3007,6 +3220,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -3162,6 +3379,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -3366,6 +3587,114 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058479778}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1110137694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110137695}
+  - component: {fileID: 1110137698}
+  - component: {fileID: 1110137697}
+  - component: {fileID: 1110137696}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110137695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110137694}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.04, y: 0.25, z: 0.55}
+  m_LocalScale: {x: 0.55070615, y: 0.32418138, z: 1.0174437}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 615480458}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1110137696
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110137694}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1110137697
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110137694}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1110137698
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110137694}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1119718134
 GameObject:
   m_ObjectHideFlags: 0
@@ -3425,6 +3754,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -3535,7 +3868,7 @@ GameObject:
   - component: {fileID: 1120310216}
   - component: {fileID: 1120310215}
   m_Layer: 0
-  m_Name: ' Vector3_Angle'
+  m_Name: ' Vector3_Angle_ref'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3553,8 +3886,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 699311085}
+  m_Children:
+  - {fileID: 1662997476}
+  m_Father: {fileID: 1390494437}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1120310215
 MonoBehaviour:
@@ -3577,9 +3911,13 @@ MonoBehaviour:
   myVector_Vector3_consturcter: {x: 0, y: 0, z: 0}
   m_Rigidbody_Vector3_consturcter: {fileID: 0}
   m_Speed_Vector3_consturcter: 2
-  target_Vector3_Angle: {fileID: 0}
+  target_Vector3_Angle: {fileID: 1696146066}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -3735,6 +4073,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -3923,6 +4265,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -4105,6 +4451,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -4260,6 +4610,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -4356,6 +4710,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370356757}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1390494436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1390494437}
+  m_Layer: 0
+  m_Name: ' Vector3_Angle'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1390494437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390494436}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1120310214}
+  - {fileID: 1696146066}
+  m_Father: {fileID: 699311085}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1421417813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4415,6 +4802,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -4768,6 +5159,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -4938,6 +5333,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -5034,6 +5433,114 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602812456}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1662997475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1662997476}
+  - component: {fileID: 1662997479}
+  - component: {fileID: 1662997478}
+  - component: {fileID: 1662997477}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1662997476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662997475}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.208, z: 0.529}
+  m_LocalScale: {x: 0.72531, y: 0.2568742, z: 0.47036}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1120310214}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1662997477
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662997475}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1662997478
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662997475}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1662997479
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662997475}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1688744748
 GameObject:
   m_ObjectHideFlags: 0
@@ -5093,6 +5600,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -5189,6 +5700,114 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688744748}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1696146065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696146066}
+  - component: {fileID: 1696146069}
+  - component: {fileID: 1696146068}
+  - component: {fileID: 1696146067}
+  m_Layer: 0
+  m_Name: ' Vector3_Angle_target'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1696146066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696146065}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.33, y: 0, z: -7.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1390494437}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1696146067
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696146065}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1696146068
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696146065}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1696146069
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696146065}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1714200470
 GameObject:
   m_ObjectHideFlags: 0
@@ -5248,6 +5867,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -5403,6 +6026,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -5558,6 +6185,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -5713,6 +6344,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -5808,6 +6443,114 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737758841}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1738443083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1738443084}
+  - component: {fileID: 1738443087}
+  - component: {fileID: 1738443086}
+  - component: {fileID: 1738443085}
+  m_Layer: 0
+  m_Name: Point_B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1738443084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738443083}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.31, y: 1.27, z: 4.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 297716139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1738443085
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738443083}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1738443086
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738443083}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1738443087
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738443083}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1785479637
 GameObject:
@@ -5976,6 +6719,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -6131,6 +6878,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -6227,6 +6978,114 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898213714}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1911810325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1911810326}
+  - component: {fileID: 1911810329}
+  - component: {fileID: 1911810328}
+  - component: {fileID: 1911810327}
+  m_Layer: 0
+  m_Name: object align
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1911810326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911810325}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5, y: 0, z: 12.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 297716139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1911810327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911810325}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1911810328
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911810325}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1911810329
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911810325}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2026423231
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,6 +7145,10 @@ MonoBehaviour:
   target_Vector3_Angle: {fileID: 0}
   centerPt: {x: 0, y: 0, z: 0}
   radius: 0
+  pointA_Vector3_Cross: {fileID: 0}
+  pointB_Vector3_Cross: {fileID: 0}
+  pointOrigin_Vector3_Cross: {fileID: 0}
+  objectToAlign: {fileID: 0}
   otherDistance: {fileID: 0}
   otherdot: {fileID: 0}
   startMarker: {fileID: 0}
@@ -6381,6 +7244,114 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026423231}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2107410008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2107410009}
+  - component: {fileID: 2107410012}
+  - component: {fileID: 2107410011}
+  - component: {fileID: 2107410010}
+  m_Layer: 0
+  m_Name: Point_C
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2107410009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107410008}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.91, y: 0.91, z: 7.0299997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 297716139}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2107410010
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107410008}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2107410011
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107410008}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2107410012
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107410008}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
