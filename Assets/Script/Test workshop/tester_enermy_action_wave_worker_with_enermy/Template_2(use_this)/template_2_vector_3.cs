@@ -258,7 +258,7 @@ public class template_2_vector_3 : MonoBehaviour
     void awake_Vector3_MoveTowards()
     {
 
-        /*
+        
         // Position the cube at the origin.
         transform.position = new Vector3(0.0f, 0.0f, 0.0f);
 
@@ -278,7 +278,7 @@ public class template_2_vector_3 : MonoBehaviour
         GameObject floor = GameObject.CreatePrimitive(PrimitiveType.Plane);
         floor.transform.position = new Vector3(0.0f, -1.0f, 0.0f);
 
-        */
+        
 
     }
 
@@ -2066,7 +2066,10 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
         else if(test_Vector_3 == Test_vector_3.Vector3_MoveTowards)
         {
 
+
             Vector3_MoveTowards();
+
+
         }
         else if(test_Vector_3 == Test_vector_3.Vector3_Normalize_void)
         {
