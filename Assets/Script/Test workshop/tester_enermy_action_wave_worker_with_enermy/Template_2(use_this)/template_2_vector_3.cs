@@ -146,6 +146,14 @@ public class template_2_vector_3 : MonoBehaviour
     private float journeyLength_Vector3_Lerp;
 
 
+    //help Vector3.LerpUnclamped  
+    [Header("Help Vector3.LerpUnclamped")]
+
+    public Transform pointA_Vector3_LerpUnclamped;
+    public Transform pointB_Vector3_LerpUnclamped;
+    public float speed = 1.0f;
+
+
 
     //help Vector3_Max
     [Header("Help Vector3_Max")]
@@ -410,6 +418,18 @@ public class template_2_vector_3 : MonoBehaviour
         else if(test_Vector_3 == Test_vector_3.Vector3_Lerp)
         {
             setup_Vector3_Lerp();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_LerpUnclamped)
+        {
+            Vector3_LerpUnclamped();
+        }
+        else if (test_Vector_3 == Test_vector_3.Vector3_Max)
+        {
+            Vector3_Max();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Min)
+        {
+            Vector3_Min();
         }
 
     }
@@ -1291,6 +1311,9 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
          */
 
+        float t = Time.deltaTime * speed;
+        transform.position = Vector3.LerpUnclamped(pointA_Vector3_LerpUnclamped.position, pointB_Vector3_LerpUnclamped.position, t);
+
     }
 
 
@@ -2014,11 +2037,15 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
         {
             Vector3_Lerp();
         }
-            
+        
+        
+
         else if(test_Vector_3 == Test_vector_3.Vector3_LerpUnclamped)
         {
             Vector3_LerpUnclamped();
         }
+
+
 
         else if(test_Vector_3 == Test_vector_3.Vector3_Max )
         {
