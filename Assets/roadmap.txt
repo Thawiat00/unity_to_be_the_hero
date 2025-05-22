@@ -46,7 +46,7 @@ play animation enermy           (tester_enermy_action_animation_play_enermy  (st
 
 
 
-(to this on template)
+(to this on template_2)
 enermy wave_worker_with_enermy(?)                                 (tester_enermy_action_wave_worker_with_enermy        (status = ) ) 
    - enermy wave_worker_with_enermy_start ()             (tester_enermy_action_wave_worker_with_enermy_start  (status = ) ) 
    - enermy wave_worker_with_enermy_end (when enermy on wave game = 0))   (tester_enermy_action_wave_worker_with_enermy_end    (status = ) ) 
