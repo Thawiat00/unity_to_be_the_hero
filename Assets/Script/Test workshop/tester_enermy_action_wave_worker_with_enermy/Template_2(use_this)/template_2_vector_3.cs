@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 
 public enum Test_vector_3
@@ -182,12 +184,10 @@ public class template_2_vector_3 : MonoBehaviour
     // The axis and amount of scaling.
     public Vector3 stretchAxis_Vector3_OrthoNormalize;
     public float stretchFactor_Vector3_OrthoNormalize = 1.0F;
-
     // MeshFilter component and arrays for the original and transformed vertices.
     private MeshFilter mf_Vector3_OrthoNormalize;
     private Vector3[] origVerts_Vector3_OrthoNormalize;
     private Vector3[] newVerts_Vector3_OrthoNormalize;
-
     // Our new basis vectors.
     private Vector3 basisA_Vector3_OrthoNormalize;
     private Vector3 basisB_Vector3_OrthoNormalize;
@@ -195,20 +195,31 @@ public class template_2_vector_3 : MonoBehaviour
 
 
 
+    //help Vector3_project
+    [Header("Help Vector3_Project")]
+    public Transform target_Vector3_Project;
+    public Vector3 railDirection_Vector3_Project;
+
+
     //help Vector3_ProjectOnPlane
     [Header("Help Vector3_ProjectOnPlane")]
-    private Vector3 vector, planeNormal;
-    private Vector3 response;
-    private float radians;
-    private float degrees;
-    private float timer = 12345.0f;
+    public Vector3 vector, planeNormal;
+    public Vector3 response;
+    public float radians;
+    public float degrees;
+    public float timer = 12345.0f;
 
 
 
     //help Vector3_Reflect
     [Header("Help Vector3_Reflect")]
-    public Transform originalObject_Vector3_Reflect;
-    public Transform reflectedObject_Vector3_Reflect;
+    public Vector3 initialDirection_Help_Vector3_Reflect = new Vector3(1, -1, 0);
+    public float speed_Help_Vector3_Reflect = 5f;
+    private Rigidbody rb_Help_Vector3_Reflect;
+    private bool hasBouncedOnce = false;
+
+
+
 
     //help Vector3_RotateTowards
     [Header("Help Vector3_RotateTowards")]
@@ -233,6 +244,15 @@ public class template_2_vector_3 : MonoBehaviour
     public float journeyTime_Vector3_Slerp = 1.0f;
     // The time at which the animation started.
     private float startTime_Vector3_Slerp;
+
+
+    //help Vector3_SlerpUnclamped 
+    [Header("Help Vector3_SlerpUnclamped")]
+    public Vector3 fromDir_Vector3_SlerpUnclamped = new Vector3(1, 0, 0);   // เริ่มจากทิศทางขวา
+    public Vector3 toDir_Vector3_SlerpUnclamped = new Vector3(0, 1, 0);     // หมุนไปทิศทางบน
+    public float speed_Vector3_SlerpUnclamped = 1.0f;
+    private float t_Vector3_SlerpUnclamped = 0f;
+
 
 
 
@@ -443,6 +463,48 @@ public class template_2_vector_3 : MonoBehaviour
         {
             setup_Vector3_OrthoNormalize();
 
+
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Project)
+        {
+            Vector3_Project(target_Vector3_Project, railDirection_Vector3_Project);
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_ProjectOnPlane)
+        {
+            Vector3_ProjectOnPlane();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Reflect)
+        {
+            //Vector3_Reflect()
+            setup_Vector3_Reflect();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_RotateTowards)
+        {
+            Vector3_RotateTowards();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Scale)
+        {
+            Vector3_Scale();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_SignedAngle)
+        {
+            Vector3_SignedAngle();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Slerp)
+        {
+            setup_Vector3_Slerp();
+
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_SlerpUnclamped)
+        {
+
+            Vector3_SlerpUnclamped();
+
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_SmoothDamp)
+        {
+
+            Vector3_SmoothDamp();
 
         }
 
@@ -1114,6 +1176,53 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
         }
 
+        else if (test_Vector_3 == Test_vector_3.Vector3_Project)
+        {
+            if (target_Vector3_Project == null)
+                return;
+
+            // 1. เวกเตอร์ heading
+            Vector3 heading = target_Vector3_Project.position - transform.position;
+
+            // 2. การฉาย heading ลงบน railDirection
+            Vector3 projection = Vector3.Project(heading, railDirection_Vector3_Project.normalized);
+
+            // จุดปลายของ projection
+            Vector3 projectedPoint = transform.position + projection;
+
+            // เส้นจากต้นทางไปยังเป้าหมาย
+            Gizmos.color = Color.white;
+            Gizmos.DrawLine(transform.position, target_Vector3_Project.position);
+            Gizmos.DrawSphere(target_Vector3_Project.position, 0.1f);
+
+            // เส้นทิศทางราง
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawLine(transform.position, transform.position + railDirection_Vector3_Project.normalized * 3f);
+
+            // เส้นของ projection
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position, projectedPoint);
+            Gizmos.DrawSphere(projectedPoint, 0.05f);
+
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_ProjectOnPlane)
+        {
+
+
+
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Reflect)
+        {
+            /*
+            Gizmos.color = Color.green;
+            Gizmos.DrawRay(transform.position, planeNormal.normalized * 2f);
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position, currentDirection_Vector3_Reflect.normalized * 2f);
+            */
+        }
+
+
 
     }
 
@@ -1257,6 +1366,7 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
         // Calculate the journey length.
         journeyLength_Vector3_Lerp = Vector3.Distance(startMarker.position, endMarker.position);
     }
+
 
 
     public void Vector3_Lerp()
@@ -1630,9 +1740,20 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
             // Obtain the ProjectOnPlane result.
             response = Vector3.ProjectOnPlane(vector, planeNormal);
 
+
+            // reset positon here
+            transform.position = Vector3.zero;
+
             // Reset the timer.
             timer = 0.0f;
         }
+
+        int movespeed = 1;
+
+     
+        // move (projected vector)
+        transform.position += response.normalized * movespeed * Time.deltaTime;
+
         timer += Time.deltaTime;
 
 
@@ -1641,7 +1762,7 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
 
     // Show a Scene view example.
-    void OnDrawGizmosSelected_Vector3_ProjectOnPlane()
+    void OnDrawGizmosSelected()
     {
         // Left/right and up/down axes.
         Gizmos.color = Color.white;
@@ -1669,6 +1790,52 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
     }
 
 
+
+    public void setup_Vector3_Reflect()
+    {
+        // startPosition_Vector3_Reflect = transform.position;
+        // currentDirection_Vector3_Reflect = moveDirection_Vector3_Reflect.normalized;
+        rb_Help_Vector3_Reflect = GetComponent<Rigidbody>();
+        rb_Help_Vector3_Reflect.linearVelocity = initialDirection_Help_Vector3_Reflect.normalized * speed_Help_Vector3_Reflect;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(test_Vector_3 == Test_vector_3.Vector3_Reflect)
+        {
+
+            Vector3 normal = collision.contacts[0].normal;
+            Vector3 reflectedDir = Vector3.Reflect(rb_Help_Vector3_Reflect.linearVelocity, normal);
+
+            if (!hasBouncedOnce)
+            {
+                // ✅ เด้งครั้งแรกแรงขึ้น
+                reflectedDir.y = Mathf.Abs(reflectedDir.y) + 5f;
+                rb_Help_Vector3_Reflect.linearVelocity = reflectedDir;
+
+                hasBouncedOnce = true; // ✅ ครั้งต่อไปจะเด้งเบาลง
+            }
+            else
+            {
+                // ✅ เด้งธรรมดา + ลดแรงลง
+                reflectedDir.y = Mathf.Abs(reflectedDir.y) + 2f;
+
+                // หยุดถ้าช้ามาก
+                if (rb_Help_Vector3_Reflect.linearVelocity.magnitude < 0.5f)
+                {
+                    rb_Help_Vector3_Reflect.linearVelocity = Vector3.zero;
+                }
+                else
+                {
+                    rb_Help_Vector3_Reflect.linearVelocity = reflectedDir * 0.8f;
+                }
+            }
+
+        }
+
+      
+    }
+
     public void Vector3_Reflect()
     {
 
@@ -1693,8 +1860,9 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
         // Makes the reflected object appear opposite of the original object,
         // mirrored along the z-axis of the world
-        reflectedObject_Vector3_Reflect.position = Vector3.Reflect(originalObject_Vector3_Reflect.position, Vector3.right);
-
+        // reflectedObject_Vector3_Reflect.position = Vector3.Reflect(originalObject_Vector3_Reflect.position, Vector3.right);
+        // เคลื่อนที่
+  
 
     }
 
@@ -1766,6 +1934,7 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
         // Calculate the two vectors generating a result.
         // This will compute Vector3(2, 6, 12)
+
         print(Vector3.Scale(new Vector3(1, 2, 3), new Vector3(2, 3, 4)));
 
     }
@@ -1817,6 +1986,15 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
     }
 
+
+    public void setup_Vector3_Slerp()
+    {
+
+
+        // Note the time at the start of the animation.
+        startTime_Vector3_Slerp = Time.time;
+
+    }
 
 
     public void Vector3_Slerp()
@@ -1876,6 +2054,12 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
         Additional resources: Slerp.         
         */
+
+
+        t_Vector3_SlerpUnclamped += Time.deltaTime * speed;
+        Vector3 direction = Vector3.SlerpUnclamped(fromDir_Vector3_SlerpUnclamped, toDir_Vector3_SlerpUnclamped, t_Vector3_SlerpUnclamped);
+
+        transform.position += direction * Time.deltaTime * 5f; // เคลื่อนที่ไปตามทิศ
 
     }
 
@@ -2111,11 +2295,22 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
         }
 
+        /*
+        else if(test_Vector_3 == Test_vector_3.Vector3_Project)
+        {
+            Vector3_Project();
+        }
+        */
+        else if (test_Vector_3 == Test_vector_3.Vector3_Project)
+        {
+            Vector3_Project(target_Vector3_Project, railDirection_Vector3_Project);
+        }
+
         else if(test_Vector_3 == Test_vector_3.Vector3_ProjectOnPlane)
         {
 
             Vector3_ProjectOnPlane();
-            OnDrawGizmosSelected_Vector3_ProjectOnPlane();
+          // OnDrawGizmosSelected_Vector3_ProjectOnPlane();
         }
 
         else if(test_Vector_3 == Test_vector_3.Vector3_Reflect)
