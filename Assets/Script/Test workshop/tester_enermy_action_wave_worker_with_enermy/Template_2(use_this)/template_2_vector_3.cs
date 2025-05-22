@@ -398,6 +398,19 @@ public class template_2_vector_3 : MonoBehaviour
             Vector3_Angle();
         }
 
+        else if(test_Vector_3 == Test_vector_3.Vector3_Distance)
+        {
+            Vector3_Distance();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Dot)
+        {
+            Vector3_Dot();
+
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Lerp)
+        {
+            setup_Vector3_Lerp();
+        }
 
     }
 
@@ -1201,6 +1214,16 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
     }
 
+    public void setup_Vector3_Lerp()
+    {
+
+        // Keep a note of the time the movement started.
+        startTime_Vector3_Lerp = Time.time;
+
+        // Calculate the journey length.
+        journeyLength_Vector3_Lerp = Vector3.Distance(startMarker.position, endMarker.position);
+    }
+
 
     public void Vector3_Lerp()
     {
@@ -1979,6 +2002,9 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
             Vector3_Distance();
         }
 
+
+
+
         else if(test_Vector_3 == Test_vector_3.Vector3_Dot)
         {
             Vector3_Dot();
@@ -2085,7 +2111,10 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
             
         }
 
-
+        else
+        {
+            Debug.Log("out of state");
+        }
 
 
 
