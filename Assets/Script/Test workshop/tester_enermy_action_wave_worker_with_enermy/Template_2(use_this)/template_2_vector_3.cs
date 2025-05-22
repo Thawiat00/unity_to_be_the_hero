@@ -431,6 +431,20 @@ public class template_2_vector_3 : MonoBehaviour
         {
             Vector3_Min();
         }
+        else if(test_Vector_3 == Test_vector_3.Vector3_MoveTowards)
+        {
+            Vector3_MoveTowards();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Normalize_void)
+        {
+            Vector3_Normalize_void();
+        }
+        else if(test_Vector_3 == Test_vector_3.Vector3_Vector3_OrthoNormalize)
+        {
+            setup_Vector3_OrthoNormalize();
+
+
+        }
 
     }
 
@@ -1437,6 +1451,19 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
     }
 
 
+    public void setup_Vector3_OrthoNormalize()
+    {
+
+        // Get the Mesh Filter, then make a copy of the original vertices
+        // and a new array to calculate the transformed vertices.
+        mf_Vector3_OrthoNormalize = GetComponent<MeshFilter>();
+        origVerts_Vector3_OrthoNormalize = mf_Vector3_OrthoNormalize.mesh.vertices;
+        newVerts_Vector3_OrthoNormalize = new Vector3[origVerts_Vector3_OrthoNormalize.Length];
+
+
+
+    }
+
     public void Vector3_OrthoNormalize()
     {
 
@@ -1518,7 +1545,6 @@ T               he magnitude of a vector v is calculated as Mathf.Sqrt(Vector3.D
 
         // ...and finally, update the mesh with the new vertex array.
         mf_Vector3_OrthoNormalize.mesh.vertices = newVerts_Vector3_OrthoNormalize;
-
 
     }
 

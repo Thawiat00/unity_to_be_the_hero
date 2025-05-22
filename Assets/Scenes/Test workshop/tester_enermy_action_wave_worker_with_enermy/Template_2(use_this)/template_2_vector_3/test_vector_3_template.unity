@@ -5203,7 +5203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1339146968
 Transform:
   m_ObjectHideFlags: 0
@@ -6350,7 +6350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1688744749
 Transform:
   m_ObjectHideFlags: 0
@@ -6407,8 +6407,8 @@ MonoBehaviour:
   a_Vector_min: {x: 1, y: 2, z: 3}
   b_Vector_min: {x: 4, y: 3, z: 2}
   speed_Vector3_MoveTowards: 1
-  stretchAxis_Vector3_OrthoNormalize: {x: 0, y: 0, z: 0}
-  stretchFactor_Vector3_OrthoNormalize: 1
+  stretchAxis_Vector3_OrthoNormalize: {x: 12, y: 2.13, z: 1.97}
+  stretchFactor_Vector3_OrthoNormalize: 0.5
   originalObject_Vector3_Reflect: {fileID: 0}
   reflectedObject_Vector3_Reflect: {fileID: 0}
   target_Vector3_RotateTowards: {fileID: 0}
