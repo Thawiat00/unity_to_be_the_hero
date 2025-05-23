@@ -384,6 +384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: manage_spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 5724411489181143302, guid: fb4d484d7eeabdd4a89a11669600935f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -403,7 +407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1632016583494901095, guid: c621798857edaff4cb74a5078e24a9a1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8870033973599415689, guid: c621798857edaff4cb74a5078e24a9a1, type: 3}
       propertyPath: m_LocalPosition.x

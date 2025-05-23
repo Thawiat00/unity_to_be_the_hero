@@ -48,6 +48,9 @@ play animation enermy           (tester_enermy_action_animation_play_enermy  (st
 
 (to this on template_2)
 enermy wave_worker_with_enermy(?)                                 (tester_enermy_action_wave_worker_with_enermy        (status = ) ) 
+
+
+(to this on template_2) (current)
    - enermy wave_worker_with_enermy_start ()             (tester_enermy_action_wave_worker_with_enermy_start  (status = ) ) 
    - enermy wave_worker_with_enermy_end (when enermy on wave game = 0))   (tester_enermy_action_wave_worker_with_enermy_end    (status = ) ) 
 
@@ -81,3 +84,10 @@ dialog show you loss        (tester_dialog_action_you_loss        (status = ) )
 dialog show you score       (tester_dialog_action_you_score       (status = ) ) 
 
 
+
+//make logic system + firebase
+// make leader board
+//authen with firebase
+// no sql create usser
+// no sql update leader board
+// no sql update score and scene
