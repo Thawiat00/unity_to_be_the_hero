@@ -50,7 +50,7 @@ play animation enermy           (tester_enermy_action_animation_play_enermy  (st
 enermy wave_worker_with_enermy(?)                                 (tester_enermy_action_wave_worker_with_enermy        (status = ) ) 
 
 
-(to this on template_2) (current)
+(to this on template_2) (success)
    - enermy wave_worker_with_enermy_start ()             (tester_enermy_action_wave_worker_with_enermy_start  (status = ) ) 
    - enermy wave_worker_with_enermy_end (when enermy on wave game = 0))   (tester_enermy_action_wave_worker_with_enermy_end    (status = ) ) 
 
@@ -58,16 +58,28 @@ enermy wave_worker_with_enermy(?)                                 (tester_enermy
 
 
 
-
+(same enermy power up)
 player hit enermy                        (tester_Player_action_player_hit_enermy  (status = ) ) 
 
+(same enermy power up)
 player kill enermy                       (tester_Player_action_player_kill_enermy  (status = ) ) 
 
-
+(same enermy power up)
 Player power up                          (tester_player_action_power_up             (status = ) ) 
   - Player  power up heal                  (tester_player_action_power_up_heal      (status = ) ) 
   - Player  power up hp                    (tester_player_action_power_up_hp        (status = ) ) 
   - Player  power up damage                (tester_player_action_power_up_damage    (status = ) ) 
+
+
+
+create model 3d player  (clear)                            (status = ) 
+create model 3d enermy      (clear)                                 (status = ) 
+
+fix model with youtube to be model separate arm and leg  (current)               (status = ) 
+model and rig maybe use in maximo                         (status = ) 
+animation maybe use in maximo                               (status = ) 
+edit animation on blender to help frame animation           (status = ) 
+
 
 
 play animation player        (tester_player_action_animation_play_player                      (status = ) ) 

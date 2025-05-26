@@ -83,7 +83,13 @@ public class Enermy_wave_spawn : MonoBehaviour
         var step = speed_Vector3_MoveTowards * Time.deltaTime; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, target_Vector3_MoveTowards.position, step);
 
+
+
+
         }
+
+
+
     }
 
 
