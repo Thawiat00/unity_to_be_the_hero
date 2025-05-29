@@ -555,6 +555,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1778088853427849699, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.082
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778088853427849699, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.251
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778088853427849699, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.148
+      objectReference: {fileID: 0}
     - target: {fileID: 2476778601490572108, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
       propertyPath: m_Name
       value: Player_New
@@ -597,30 +609,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2960159833658112502, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853003345593772011, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
-      propertyPath: m_Height
-      value: 3.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853003345593772011, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
-      propertyPath: m_Radius
-      value: 0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853003345593772011, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
-      propertyPath: m_Center.y
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853003345593772011, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
-      propertyPath: m_SkinWidth
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853003345593772011, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
-      propertyPath: m_StepOffset
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853003345593772011, guid: c0216354217b5694d870c5fcda3e2cee, type: 3}
-      propertyPath: m_MinMoveDistance
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
